@@ -28,17 +28,17 @@ function renderDocuments(documents) {
     return;
   }
 
-  for (const document of documents) {
+  for (const doc of documents) {
     const row = document.createElement('li');
     row.className = 'document-row';
     const icon = document.createElement('span');
     icon.className = 'file-icon';
     icon.setAttribute('aria-hidden', 'true');
-    icon.textContent = document.name.split('.').pop().slice(0, 4).toUpperCase();
+    icon.textContent = doc.name.split('.').pop().slice(0, 4).toUpperCase();
     const name = document.createElement('span');
     name.className = 'file-name';
-    name.title = `${document.name} · ${formatSize(document.bytes)}`;
-    name.textContent = document.name;
+    name.title = `${doc.name} · ${formatSize(doc.bytes)}`;
+    name.textContent = doc.name;
     row.append(icon, name);
     documentList.append(row);
   }
