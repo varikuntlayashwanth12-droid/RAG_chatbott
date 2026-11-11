@@ -1,4 +1,4 @@
-# Local RAG Chatbot
+# RAG_chatbott
 
 A document-question-answering app that retrieves relevant text from your PDF, TXT, and Markdown files, then uses a locally running Ollama model to generate an answer. No paid API key is required.
 
